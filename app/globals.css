@@ -231,3 +231,15 @@ footer { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; padding: 70px
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   [data-reveal] { opacity: 1; transform: none; }
 }
+
+/* Emil-style interaction polish: purposeful, interruptible, and reduced-motion safe. */
+.button, .nav-contact, .text-link, .line-link, .fleet-row, .service-list article { will-change: transform; }
+.button:active, .nav-contact:active, .menu-button:active { transform: scale(.97); transition-duration: 120ms; }
+.button:focus-visible, .nav-contact:focus-visible, nav a:focus-visible, .text-link:focus-visible, .line-link:focus-visible, .fleet-row:focus-visible { outline: 2px solid var(--blue-light); outline-offset: 5px; }
+.hero-image { transform: scale(1.015); transition: transform 900ms cubic-bezier(.23,1,.32,1), filter 500ms ease; }
+.hero:hover .hero-image { transform: scale(1.035); }
+.route-path { stroke-dasharray: 10 18; animation: routeDrift 7s linear infinite; }
+.service-list article, .fleet-row { transition: transform 220ms cubic-bezier(.23,1,.32,1), background 220ms ease, padding 220ms cubic-bezier(.23,1,.32,1); }
+.service-list article:hover, .fleet-row:hover { transform: translateX(8px); }
+@keyframes routeDrift { to { stroke-dashoffset: -140; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; } .hero-image, .hero:hover .hero-image { transform: none; } }
