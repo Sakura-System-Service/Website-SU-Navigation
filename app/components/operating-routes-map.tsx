@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import { geoMercator, geoPath } from "d3-geo";
 import { feature } from "topojson-client";
 import world from "world-atlas/countries-110m.json";
@@ -30,17 +31,32 @@ function pathFor(projection: ReturnType<typeof geoMercator>, route: Coordinates[
 
 export function OperatingRoutesMap({ variant }: { variant: keyof typeof configuration }) {
   const config = configuration[variant];
+  const figureRef = useRef<HTMLElement>(null);
+  const [isActive, setIsActive] = useState(false);
+
+  useEffect(() => {
+    const node = figureRef.current;
+    if (!node) return;
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setIsActive(true);
+        observer.disconnect();
+      }
+    }, { threshold: 0.3 });
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
   const projection = geoMercator().center(config.center).scale(config.scale).translate([360, 220]);
   const path = geoPath(projection);
   const countries = feature(world as never, (world as never).objects.countries) as GeoJSON.FeatureCollection;
 
-  return <figure className="route-map-figure">
+  return <figure ref={figureRef} className="route-map-figure" data-route-active={isActive}>
     <figcaption>{config.title}</figcaption>
     <svg viewBox="0 0 720 440" role="img" aria-label={`${config.title} operating-route map`}>
       <defs><filter id={`glow-${variant}`} x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
       <rect width="720" height="440" fill="#0c344b"/>
       <g className="route-map-land">{countries.features.map((country, index) => <path key={index} d={path(country) ?? ""}/>)}</g>
-      <g className="route-map-routes">{config.routes.map((route, index) => <path key={index} d={pathFor(projection, route)} className={`route-map-line route-map-line-${index + 1}`}/>)}</g>
+      <g className="route-map-routes">{config.routes.map((route, index) => <g key={index}><path id={`route-${variant}-${index}`} d={pathFor(projection, route)} className={`route-map-line route-map-line-${index + 1}`}/><path d={pathFor(projection, route)} className={`route-map-signal route-map-signal-${index + 1}`}/></g>)}</g>
       <g className="route-map-ports">{config.labels.map(([label, coordinates]) => { const point = projection(coordinates); return point && <g key={label} transform={`translate(${point[0]}, ${point[1]})`}><circle r="5" filter={`url(#glow-${variant})`}/><text x="10" y="-9">{label}</text></g>; })}</g>
       <text className="route-map-note" x="24" y="406">ILLUSTRATIVE ROUTE NETWORK · GEOGRAPHIC BASE: NATURAL EARTH</text>
     </svg>
