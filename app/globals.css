@@ -42,7 +42,7 @@ a:hover .arrow, article:hover > .arrow { transform: rotate(45deg); }
 .menu-button { display: none; }
 
 .hero { position: relative; min-height: 800px; height: 100svh; max-height: 980px; color: white; background: var(--navy); }
-.hero-image { position: absolute; inset: 0; background: url('/images/sunavigation-hero.png') 58% center / cover no-repeat; animation: heroZoom 14s ease-out both; }
+.hero-image { position: absolute; inset: 0; background: url('/Website-SU-Navigation/images/sunavigation-hero.png') 58% center / cover no-repeat; animation: heroZoom 14s ease-out both; }
 .hero-scrim { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(2,15,25,.92) 0%, rgba(3,22,34,.73) 31%, rgba(4,25,38,.16) 65%, rgba(2,16,25,.2) 100%), linear-gradient(0deg, rgba(2,15,24,.72), transparent 48%); }
 .hero::after { content: ""; position: absolute; inset: 0; opacity: .18; pointer-events: none; background-image: repeating-linear-gradient(90deg, transparent 0, transparent calc(25% - 1px), rgba(255,255,255,.16) 25%); }
 .hero::before { content: ""; position: absolute; z-index: 2; inset: -25%; pointer-events: none; opacity: .42; background: radial-gradient(circle at 22% 48%, rgba(84,196,235,.32), transparent 16%), radial-gradient(circle at 69% 38%, rgba(255,255,255,.16), transparent 12%); animation: oceanLight 14s ease-in-out infinite alternate; }
