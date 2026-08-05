@@ -46,11 +46,11 @@ export default function Home() {
         </button>
 
         <nav className={menuOpen ? "open" : ""} aria-label="Main navigation">
-          <a href="#about" onClick={closeMenu}>About</a>
-          <a href="#services" onClick={closeMenu}>Services</a>
-          <a href="#fleet" onClick={closeMenu}>Fleet</a>
-          <a href="#safety" onClick={closeMenu}>Safety</a>
-          <a className="nav-contact" href="#contact" onClick={closeMenu}>Contact <Arrow /></a>
+          <a href="/Website-SU-Navigation/about" onClick={closeMenu}>About</a>
+          <a href="/Website-SU-Navigation/services" onClick={closeMenu}>Services</a>
+          <a href="/Website-SU-Navigation/fleet" onClick={closeMenu}>Fleet</a>
+          <a href="/Website-SU-Navigation/services#safety" onClick={closeMenu}>Safety</a>
+          <a className="nav-contact" href="/Website-SU-Navigation/contact" onClick={closeMenu}>Contact <Arrow /></a>
         </nav>
       </header>
 
@@ -71,8 +71,8 @@ export default function Home() {
             Reliable marine transportation across Far East and Southeast Asia — delivered with disciplined safety, technical expertise and care.
           </p>
           <div className="hero-actions">
-            <a className="button button-primary" href="#services">Explore our services <Arrow /></a>
-            <a className="text-link" href="#fleet">View our fleet <span aria-hidden="true">↓</span></a>
+            <a className="button button-primary" href="/Website-SU-Navigation/services">Explore our services <Arrow /></a>
+            <a className="text-link" href="/Website-SU-Navigation/fleet">View our fleet <span aria-hidden="true">↓</span></a>
           </div>
         </div>
 
@@ -99,7 +99,7 @@ export default function Home() {
           <div className="about-copy" data-reveal>
             <p className="lead">We support the chemical and oil industries through safe, dependable marine transport.</p>
             <p>As part of Shokuyu Tanker Group, SU Navigation combines regional reach with specialist knowledge of liquid bulk cargo. We build long-term relationships by putting customer confidence and operational discipline first.</p>
-            <a className="line-link" href="#safety">Discover our approach <Arrow /></a>
+            <a className="line-link" href="/Website-SU-Navigation/about">Discover our approach <Arrow /></a>
           </div>
         </div>
         <div className="values-grid" data-reveal>
@@ -211,7 +211,7 @@ export default function Home() {
 
       <footer>
         <div className="footer-brand"><span className="brand-word">SU N<span className="brand-sail">◆</span>VI</span><p>SU Navigation Pte. Ltd.<br />A Shokuyu Tanker Group company</p></div>
-        <div className="footer-links"><a href="#about">About</a><a href="#services">Services</a><a href="#fleet">Fleet</a><a href="#safety">Safety</a><a href="#contact">Contact</a></div>
+        <div className="footer-links"><a href="/Website-SU-Navigation/about">About</a><a href="/Website-SU-Navigation/services">Services</a><a href="/Website-SU-Navigation/fleet">Fleet</a><a href="/Website-SU-Navigation/services#safety">Safety</a><a href="/Website-SU-Navigation/contact">Contact</a></div>
         <div className="footer-bottom"><span>© 2026 SU Navigation Pte. Ltd.</span><a href="#top">Back to top ↑</a></div>
       </footer>
     </main>

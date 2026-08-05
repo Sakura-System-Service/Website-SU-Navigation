@@ -243,3 +243,60 @@ footer { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; padding: 70px
 .service-list article:hover, .fleet-row:hover { transform: translateX(8px); }
 @keyframes routeDrift { to { stroke-dashoffset: -140; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; } .hero-image, .hero:hover .hero-image { transform: none; } }
+
+/* Editorial detail pages */
+.subpage { min-height: 100vh; color: var(--ink); background: #edf3f3; }
+.subpage-header { display: flex; justify-content: space-between; align-items: center; gap: 32px; padding: 24px clamp(24px, 5vw, 84px); color: #eff8fa; background: #071c29; }
+.subpage-brand { color: inherit; font-size: 17px; font-weight: 800; letter-spacing: .16em; text-decoration: none; white-space: nowrap; }
+.subpage-header nav { display: flex; gap: clamp(14px, 2.5vw, 38px); }
+.subpage-header nav a { color: rgba(239,248,250,.75); font-size: 12px; font-weight: 600; text-decoration: none; transition: color .2s ease; }
+.subpage-header nav a:hover, .subpage-header nav a:focus-visible { color: #8be4ff; }
+.subpage-hero { min-height: 360px; padding: 76px clamp(24px, 11vw, 170px); color: white; background: linear-gradient(112deg, #071c29 0%, #0c344b 58%, #126b94 150%); }
+.subpage-hero p { margin: 0 0 25px; color: #8be4ff; font-size: 12px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+.subpage-hero h1 { max-width: 780px; margin: 0; font-size: clamp(48px, 7vw, 96px); font-weight: 400; letter-spacing: -.04em; line-height: .95; }
+.subpage-hero h1 em { color: #a9e5f6; }
+.subpage-hero > a { display: inline-block; margin-top: 32px; color: white; font-size: 13px; font-weight: 600; text-underline-offset: 5px; }
+.subpage-section { max-width: 1180px; margin: 0 auto; padding: 96px 36px; }
+.subpage-section h2 { margin: 0 0 28px; font-size: clamp(36px, 4vw, 58px); font-weight: 400; letter-spacing: -.04em; }
+.subpage-section h3 { font-size: 20px; }
+.subpage-section p, .subpage-section li, .subpage-section dd, .subpage-section address { max-width: 75ch; color: #42535b; font-size: 15px; line-height: 1.8; }
+.subpage-section a { color: #087ab6; font-weight: 700; text-underline-offset: 4px; }
+.subpage-lead { max-width: 58ch !important; margin: 0 0 42px; color: #173445 !important; font-size: clamp(20px, 2.2vw, 28px) !important; line-height: 1.45 !important; }
+.mission { border-bottom: 1px solid #c6d5d9; }
+.mission ol { max-width: 900px; margin: 0; padding: 0; list-style-position: inside; columns: 2; column-gap: 70px; }
+.mission li { break-inside: avoid; padding: 16px 8px 16px 0; border-top: 1px solid #c6d5d9; }
+.profile { background: white; }
+.profile dl { margin: 0; border-top: 1px solid #b7cbd1; }
+.profile dl > div { display: grid; grid-template-columns: 1fr 1.8fr; gap: 42px; padding: 22px 0; border-bottom: 1px solid #d5e0e3; }
+.profile dt { color: #577078; font-size: 12px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
+.profile dd { margin: 0; color: #173445; }
+.profile-columns { display: grid; grid-template-columns: 1.2fr 1.3fr .8fr; gap: 35px; margin-top: 68px; }
+.profile-columns h3 { margin: 0 0 14px; }
+.profile-columns p { margin: 0; }
+.history { padding-bottom: 120px; }
+.timeline { border-top: 1px solid #9cb2ba; }
+.timeline article { display: grid; grid-template-columns: 170px 1fr; gap: 40px; padding: 23px 0; border-bottom: 1px solid #c6d5d9; }
+.timeline article:nth-child(even) { background: rgba(169,229,246,.18); }
+.timeline time { padding-left: 16px; color: #087ab6; font-size: 12px; font-weight: 700; letter-spacing: .08em; }
+.timeline p { margin: 0; }
+.service-detail-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid #afc4ca; }
+.service-detail-grid article { padding: 28px 28px 28px 0; border-bottom: 1px solid #afc4ca; }
+.service-detail-grid article:not(:first-child) { padding-left: 28px; border-left: 1px solid #afc4ca; }
+.service-detail-grid span { color: #087ab6; font-size: 12px; font-weight: 800; }
+.service-detail-grid h3 { margin: 30px 0 12px; }
+.service-detail-grid p { margin: 0; }
+.safety-detail { max-width: none; padding: 96px max(36px, calc((100vw - 1108px)/2)); color: white; background: #071c29; }
+.safety-detail h2, .safety-detail h3 { color: white; }.safety-detail p { color: rgba(255,255,255,.74); }.safety-detail a { color: #8be4ff; }
+.three-no { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 38px; margin: 52px 0; padding: 30px 0; border-top: 1px solid rgba(255,255,255,.22); border-bottom: 1px solid rgba(255,255,255,.22); }
+.three-no span { color: #8be4ff; font-size: 12px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }.three-no p { margin: 0; font-size: 20px; line-height: 1.55; }
+.subpage-source { display: inline-block; margin-top: 24px; }
+.fleet-detail { max-width: 1320px; }.fleet-detail-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; margin-bottom: 44px; }.fleet-detail-intro p { margin: 10px 0 0; }
+.vessel-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.vessel-card { padding: 24px; color: #dff5fb; background: #0c344b; }.vessel-card:nth-child(3n+2) { background: #125273; }.vessel-card:nth-child(3n) { background: #0b2a3a; }
+.tanker { display: block; width: min(100%, 340px); height: auto; margin: 8px 0 22px; color: #c4f0fb; }.tanker-long { transform: scaleX(1.1); transform-origin: left center; }
+.vessel-card-head { display: flex; justify-content: space-between; gap: 16px; align-items: baseline; padding-bottom: 14px; border-bottom: 1px solid rgba(255,255,255,.25); }.vessel-card h3 { margin: 0; color: white; font-size: 24px; letter-spacing: -.02em; }.vessel-card-head span { color: #8be4ff; font-size: 10px; font-weight: 800; letter-spacing: .1em; }
+.vessel-card dl { display: grid; grid-template-columns: 1fr 1fr; gap: 0 22px; margin: 14px 0 0; }.vessel-card dl > div { padding: 11px 0; border-bottom: 1px solid rgba(255,255,255,.12); }.vessel-card dt { color: rgba(255,255,255,.52); font-size: 9px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }.vessel-card dd { margin: 4px 0 0; color: white; font-size: 12px; line-height: 1.35; }
+.fleet-links { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 46px; }.fleet-links a { color: #087ab6; font-size: 14px; }
+.contact-detail { max-width: 1320px; }.singapore-office { display: grid; grid-template-columns: minmax(300px, .8fr) 1.2fr; min-height: 410px; color: white; background: #0c344b; }.singapore-office > div { display: flex; flex-direction: column; align-items: flex-start; padding: 46px; }.singapore-office img { width: 48px; height: 32px; margin-bottom: 36px; }.singapore-office p { margin: 0 0 10px; color: #8be4ff; font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }.singapore-office h2 { margin: 0 0 15px; color: white; font-size: 34px; font-weight: 400; letter-spacing: -.03em; }.singapore-office address { margin-bottom: 18px; color: rgba(255,255,255,.78); font-style: normal; }.singapore-office a { color: white; font-size: 16px; font-weight: 700; }.singapore-office span { margin-top: 7px; color: rgba(255,255,255,.66); font-size: 13px; }.singapore-office .map-link { margin-top: auto; color: #8be4ff; font-size: 13px; }.singapore-office iframe { width: 100%; min-height: 410px; border: 0; filter: saturate(.72) contrast(.94); }
+.office-directory { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin-top: 70px; border-top: 1px solid #afc4ca; }.office-directory article { display: flex; flex-direction: column; min-height: 270px; padding: 26px 28px 30px 0; border-bottom: 1px solid #afc4ca; }.office-directory article:not(:nth-child(3n+1)) { padding-left: 28px; border-left: 1px solid #afc4ca; }.office-directory h3 { margin: 0 0 14px; }.office-directory address { margin: 0 0 18px; font-style: normal; }.office-directory a { margin-top: auto; }.office-directory span { margin-top: 7px; color: #63767e; font-size: 12px; }
+@media (max-width: 760px) { .subpage-header { align-items: flex-start; flex-direction: column; gap: 17px; }.subpage-header nav { flex-wrap: wrap; }.subpage-hero { min-height: 300px; padding: 60px 24px; }.subpage-section { padding: 70px 24px; }.mission ol { columns: 1; }.profile dl > div, .timeline article, .three-no, .fleet-detail-intro, .singapore-office { grid-template-columns: 1fr; gap: 16px; }.profile-columns, .service-detail-grid, .vessel-grid, .office-directory { grid-template-columns: 1fr; }.service-detail-grid article:not(:first-child), .office-directory article:not(:nth-child(3n+1)) { padding-left: 0; border-left: 0; }.service-detail-grid article { padding: 24px 0; }.timeline time { padding-left: 0; }.vessel-card dl { grid-template-columns: 1fr 1fr; }.singapore-office iframe { min-height: 310px; }.singapore-office > div { min-height: 390px; padding: 34px 25px; }.office-directory { margin-top: 50px; }.office-directory article { min-height: auto; padding: 24px 0; }.office-directory a { margin-top: 16px; } }
