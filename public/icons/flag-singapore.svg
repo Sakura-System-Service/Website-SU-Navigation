@@ -1,5 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 32" role="img" aria-label="Singapore flag">
-  <rect width="48" height="16" fill="#ef3340"/><rect y="16" width="48" height="16" fill="#fff"/>
-  <path d="M14 4.5a7 7 0 1 0 0 7.1A8 8 0 1 1 14 4.5Z" fill="#fff"/>
-  <g fill="#fff"><circle cx="18" cy="7" r="1.1"/><circle cx="21.1" cy="4.9" r="1.1"/><circle cx="24.3" cy="7" r="1.1"/><circle cx="23.1" cy="10.6" r="1.1"/><circle cx="19.1" cy="10.6" r="1.1"/></g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 32" role="img" aria-label="Flag of Singapore">
+  <title>Flag of Singapore</title>
+  <rect width="48" height="16" fill="#ef3340"/>
+  <rect y="16" width="48" height="16" fill="#fff"/>
+  <path d="M14.4 3.5a8.25 8.25 0 1 0 0 9A9.5 9.5 0 1 1 14.4 3.5Z" fill="#fff"/>
+  <g fill="#fff">
+    <path d="m20.7 3.25.68 2.08h2.18l-1.77 1.28.68 2.08-1.77-1.28-1.77 1.28.68-2.08-1.77-1.28h2.18z"/>
+    <path d="m24.25 5.82.68 2.08h2.18l-1.77 1.28.68 2.08-1.77-1.28-1.77 1.28.68-2.08-1.77-1.28h2.18z"/>
+    <path d="m22.9 9.72.68 2.08h2.18l-1.77 1.28.68 2.08-1.77-1.28-1.77 1.28.68-2.08-1.77-1.28h2.18z"/>
+    <path d="m18.5 9.72.68 2.08h2.18l-1.77 1.28.68 2.08-1.77-1.28-1.77 1.28.68-2.08-1.77-1.28h2.18z"/>
+    <path d="m17.15 5.82.68 2.08h2.18l-1.77 1.28.68 2.08-1.77-1.28-1.77 1.28.68-2.08-1.77-1.28h2.18z"/>
+  </g>
 </svg>

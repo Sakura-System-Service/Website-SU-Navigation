@@ -213,9 +213,9 @@ export default function Home() {
         </div>
 
         <div className="office-grid" data-reveal>
-          <article><span>Head office</span><h3>Singapore</h3><p>200 Cantonment Road<br />#14-04 Southpoint<br />Singapore 089763</p><a href="tel:+6562250800">+65 6225 0800</a></article>
-          <article><span>Regional office</span><h3>Tokyo</h3><p>14-1 Kyobashi, 2-Chome<br />Chuo-ku, Tokyo<br />104-0031 Japan</p><a href="tel:+81355795092">+81 3 5579 5092</a></article>
-          <article><span>Group network</span><h3>Shanghai &amp; Busan</h3><p>Local representation supporting<br />customers and vessel operations<br />across East Asia.</p><a href="#top">Explore the group <Arrow /></a></article>
+          <article className="hq-office"><img src="/Website-SU-Navigation/icons/flag-singapore.svg" alt="Flag of Singapore" /><span>Head office · Singapore</span><h3>SU Navigation Pte. Ltd.</h3><p>200 Cantonment Road<br />#14-04 Southpoint<br />Singapore 089763</p><a href="tel:+6562250800">+65 6225 0800</a><small>Fax: +65 6225 0607</small></article>
+          <article><span>Other offices</span><h3>Tokyo · Shanghai · Busan</h3><p>Tokyo liaison and group headquarters, Shanghai representation, and Busan vessel-management support across East Asia.</p><a href="/Website-SU-Navigation/contact">View office locations <Arrow /></a></article>
+          <article><span>Tokyo departments</span><h3>Direct group contacts</h3><p>Overseas and domestic tanker, ship management, Sun Technomarine, accounting and general-affairs telephone lines.</p><a href="/Website-SU-Navigation/contact#tokyo-directory">View department numbers <Arrow /></a></article>
         </div>
       </section>
 
