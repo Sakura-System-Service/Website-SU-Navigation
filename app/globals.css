@@ -112,14 +112,14 @@ h2 em { color: #157db4; font-weight: 400; }
 .service-list p { margin: 0; max-width: 690px; color: rgba(255,255,255,.53); font-size: 13px; line-height: 1.7; }
 .service-list article > .arrow { background: rgba(255,255,255,.1); }
 .route-card { position: relative; display: grid; grid-template-columns: 1fr 1fr; min-height: 430px; margin-top: 95px; padding: 55px; border-radius: 2px; overflow: hidden; background: #0c344b; }
-.route-card::before { content: ""; position: absolute; inset: 0; opacity: .16; background: radial-gradient(circle at 75% 52%, #4bd0f2, transparent 36%), repeating-radial-gradient(circle at 75% 52%, transparent 0, transparent 49px, rgba(255,255,255,.22) 50px); }
+.route-card::before { content: ""; position: absolute; inset: 0; opacity: .16; background: radial-gradient(circle at 58% 48%, #4bd0f2, transparent 36%), repeating-radial-gradient(circle at 58% 48%, transparent 0, transparent 49px, rgba(255,255,255,.22) 50px); }
 .route-card > div:first-child { position: relative; z-index: 2; align-self: center; }
 .route-card h3 { margin: 0 0 22px; font-size: clamp(38px, 4vw, 62px); font-weight: 400; letter-spacing: -.04em; }
 .route-card > div > p:last-child { color: rgba(255,255,255,.5); font-size: 11px; letter-spacing: .08em; }
 .radar { position: relative; min-height: 320px; }
-.radar i { position: absolute; left: 53%; top: 50%; width: 8px; height: 8px; border-radius: 50%; background: #8be4ff; box-shadow: 0 0 20px #8be4ff; animation: ping 2.7s infinite; }
-.radar i:nth-child(2) { left: 70%; top: 27%; animation-delay: .7s; }.radar i:nth-child(3) { left: 33%; top: 70%; animation-delay: 1.3s; }
-.radar b { position: absolute; font-size: 9px; color: rgba(255,255,255,.62); }.radar b:nth-of-type(1){left:55%;top:54%}.radar b:nth-of-type(2){left:72%;top:22%}.radar b:nth-of-type(3){left:37%;top:72%}.radar b:nth-of-type(4){left:45%;top:34%}
+.radar i { position: absolute; left: 45%; top: 78%; width: 8px; height: 8px; border-radius: 50%; background: #8be4ff; box-shadow: 0 0 20px #8be4ff; animation: ping 2.7s infinite; }
+.radar i:nth-child(2) { left: 72%; top: 18%; animation-delay: .7s; }.radar i:nth-child(3) { left: 52%; top: 43%; animation-delay: 1.3s; }
+.radar b { position: absolute; font-size: 9px; color: rgba(255,255,255,.62); }.radar b:nth-of-type(1){left:47%;top:80%}.radar b:nth-of-type(2){left:74%;top:14%}.radar b:nth-of-type(3){left:54%;top:45%}.radar b:nth-of-type(4){left:42%;top:31%}
 
 .fleet { background: #edf3f3; }
 .fleet-intro { display: grid; grid-template-columns: .55fr 1.35fr .7fr; gap: 5vw; align-items: end; }
