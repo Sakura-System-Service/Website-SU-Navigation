@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { OperatingRoutesMap } from "./components/operating-routes-map";
 
 const vessels = [
   { name: "SUN MERCURY", year: "2023", dwt: "12,555.9", loa: "127.02 m", tanks: "16", flag: "Singapore" },
@@ -144,6 +145,15 @@ export default function Home() {
             <p>Singapore • Japan • Korea • China • Regional ports</p>
           </div>
           <div className="radar" aria-hidden="true"><i /><i /><i /><b>SG</b><b>JP</b><b>KR</b><b>CN</b></div>
+        </div>
+
+        <div className="operating-region-detail">
+          <div className="operating-region-copy">
+            <h3>Regional routes, grounded in local knowledge.</h3>
+            <p>We are engaged in marine transportation, shipping a wide variety of liquid bulk cargoes including specialty and commodity chemicals, petrochemicals and petroleum products for domestic and overseas customers — mainly on courses in the Far East and Southeast Asia.</p>
+            <p>Shokuyu Tanker Group also carries animal and vegetable oils in the Far East and Japan. The route maps show the operating areas represented on the original SU Navigation site, rebuilt with a geographic base and precise port locations.</p>
+          </div>
+          <div className="route-map-grid"><OperatingRoutesMap variant="corridor"/><OperatingRoutesMap variant="farEast"/></div>
         </div>
       </section>
 
