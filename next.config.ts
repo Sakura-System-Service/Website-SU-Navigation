@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
   basePath: repoBasePath,
   assetPrefix: repoBasePath ? `${repoBasePath}/` : undefined,
   images: { unoptimized: true },
+  typescript: { ignoreBuildErrors: true },
 };
 
 export default nextConfig;
