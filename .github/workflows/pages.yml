@@ -18,7 +18,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      PAGES_BASE_PATH: /sunavigation-modern
+      PAGES_BASE_PATH: /Website-SU-Navigation
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
